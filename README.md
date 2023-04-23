@@ -3,9 +3,9 @@
 Github Link: https://github.com/VirgilUwaoma/twitterwebscraping
 
 ### Introduction
-The primary objective of this project was to extract data (from anywhere), preprocess and analyze it using python language. We have used an open source library in python called *tweepy* to extract twitter data from the twitter API. There is colossal amount of data available on twitter to extract, but we have chosen a specific topic to perform our analysis on. As the rising housing crisis in Ireland, we decided to extract tweets that contained the keywords - housing/housing crisis/rent and we set the API to only extract tweets from Ireland.
+The primary objective of this project was to extract data (from anywhere), preprocess and analyze it using Python language. We have used an open-source library in Python called *tweepy* to extract Twitter data from the Twitter API. There is a colossal amount of data available on Twitter to extract, but we have chosen a specific topic to perform our analysis on. As the rising housing crisis in Ireland, we decided to extract tweets that contained the keywords - housing/housing crisis/rent and we set the API to only extract tweets from Ireland.
 
-There are many attributes that gets returned as a response in the pull request, we selected the most relevant features for the analysis. They were:
+There are many attributes that get returned as a response in the pull request, we selected the most relevant features for the analysis. They were:
 - id
 - created_at
 - username
@@ -14,19 +14,20 @@ There are many attributes that gets returned as a response in the pull request, 
 - favorite_count
 - user_location
 
-The data retrieved was stored in a pandas dataframe and some basic preprocessing on it was performed. We converted the created_at date to the desired (YYYY-MM-DD) format and cleaned the tweet, like removing the links, special characters, punctuations, etc. This preprocessed data was then inserted into a local MYSQL database and retrieved again to perform analysis.
+The data retrieved was stored in pandas dataframe and some basic preprocessing on it was performed. We converted the created_at date to the desired (YYYY-MM-DD) format and cleaned the tweet, which involved removing the links, special characters, punctuations, etc. This preprocessed data was then inserted into a local MYSQL database and retrieved to perform analysis.
 
 Finally, we worked on 6 critical questions that can be analyzed with this data.
 1. What were the words that appeared most frequently in all tweets?
-2. What were the most frequent words in tweets from 5 cities/counties with highest number of tweets?
+2. What were the most frequent words in tweets from 5 cities/counties with the most tweets?
 3. Which 10 cities/counties had the maximum number of tweets?
 4. How many tweets were posted each day in a week?
-5. Which tweet had the maximum retweet count and are there any other tweets from the same username?
-6. Which tweet had the maximum favorite count and are there any other tweets from the same username?
+5. Which tweet had the maximum retweet count and are there other tweets from the same username?
+6. Which tweet had the maximum favorite count and are there other tweets from the same username?
 
-The analysis process included: tokenizing & lemmatizing of tweets, removing of stopwords, grouping user location by city or county, making a wordcloud, visualizing different plots, and answering other questions. TPython libraries like nltk, pandas and matplotlib were used in the process of analyzing and visualizing the data.
+The analysis process included: tokenizing & lemmatizing the tweets, removing stopwords, grouping user location by city or county, making a wordcloud, visualizing different plots, and answering other questions. Python libraries like nltk, pandas and matplotlib were used in the process of analyzing and visualizing the data.
 
 ### Chirag's individual contribution
+My tasks in completing this project included assisting my group members in setting up the API and researching and reading the API documentation for extracting the desired data. The core task to which I contributed was data preprocessing, where I did some basic checks on the raw data using the *pandas* library. This is a crucial step to ensure that the data does not lead to any errors in the future. Then I converted the date to a desired format using the *datetime* library and used string and regex functions to clean the tweet. My previous learnings on text cleaning helped me majorly to complete this task. In the analysis part, I generated the line plot for the number of tweets per day and also worked on the tweet with a maximum retweet and like count. Finally, the introduction part of the project documentation was done by me where I summarized the objective and the whole process of this project.
 
 ### Chukwuebuka's individual contribution
 As a team member, my contribution involved connecting to the Tweepy API and pulling tweets related to the topic of interest. Connecting to the API required thorough research to understand the data sources and query parameters that could help us obtain relevant tweets.
@@ -36,11 +37,4 @@ Furthermore, using a bar chart, we visualized the number of tweets from the top 
 Overall, these formed the foundation for further analysis and interpretation by the team.
 
 ### Dipanshu's individual contribution
-
-The project involved implementing a database management system where a local connection was established to the database. Data was then obtained from an API and processed to ensure it is clean and relevant. The cleaned data was then inserted into the database using the established connection.
-
-Further, in the project, a specific column in the database named "tweet" was processed using tokenization, lemmatization, and word cloud techniques. Tokenization involves breaking down sentences or phrases into smaller units or tokens to enable easier analysis. Lemmatization, on the other hand, involves converting words to their base or root form to enhance analysis. Word cloud techniques help to visualize frequently occurring words or phrases in a particular text corpus, making it easier to identify significant patterns and trends.
-
-In the analysis section, the project involved extracting and processing data from the database using various techniques and tools. Specifically, the project aimed to identify the maximum number of tweets based on user location. This analysis involved using data manipulation tools to extract relevant information from the database, such as user location and the number of tweets associated with each location. The extracted data was then analyzed using statistical techniques to identify the location with the highest number of tweets.
-
-In this project, the database was managed starting from establishing a connection to the database. After establishing a local connection, the data obtained from an API was cleaned and inserted into the database. Later, the tweet column was tokenized, lemmatized and analyzed using word cloud techniques. In the analysis section, the maximum number of tweets was analyzed based on user location. This involved extracting and processing data from the database using various techniques and tools.
+In this project, I helped the team for selecting the best features to extract from the API that would be useful in performing all types of analysis. My prime contribution was to communicate between the database and Python. The tasks involved establishing a local connection with the MySQL database, designing a schema to store the preprocessed data, and inserting and extracting the data from the database. Later, a specific column in the database named *cleaned_tweet* was processed using tokenization and lemmatization. In this process, the tweets are separated word by word into meaningful chunks and are then transformed into their base words to reduce variance and complexity in data. Lastly, I also generated the word cloud for the tweets and visualized the maximum number of tweets based on user location which was later optimized and modified by the team.
