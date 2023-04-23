@@ -29,6 +29,11 @@ The analysis process included: tokenizing & lemmatizing of tweets, removing of s
 ### Chirag's individual contribution
 
 ### Chukwuebuka's individual contribution
+As a team member, my contribution involved connecting to the Tweepy API and pulling tweets related to the topic of interest. Connecting to the API required thorough research to understand the data sources and query parameters that could help us obtain relevant tweets.
+Once we pulled the tweets, the location column was cleaned to ensure data consistency and was crucial in preparing the data for analysis and visualization.
+After cleaning up the data, we visualized it using a word cloud to show the most frequent words in the tweets from the top five counties to provide a quick and easy way to identify the key themes and sentiments expressed in the tweets.
+Furthermore, using a bar chart, we visualized the number of tweets from the top 10 counties, and it provided a more comprehensive overview of the distribution of tweets across different locations, helped us identify the areas where discussion about the topic was prevalent, and provided insights into the geographic distribution of public opinion.
+Overall, these formed the foundation for further analysis and interpretation by the team.
 
 ### Dipanshu's individual contribution
 
